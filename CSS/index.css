@@ -81,7 +81,7 @@ herader nav ul li i{
     font-size: 25px;
     transition: 0.4s;
 }
-herader nav ul li a:hover i{
+herader nav ul li a:hover{
     color: var(--themeBColor);
 }
 herader nav ul li.active i{
@@ -124,14 +124,96 @@ header .footer p a{
     z-index: 999;
 }
 /*mobiles view*/
-@media only screen and (max-width:1050px){
+@media screen and (max-width:1050px){ 
     header{
-    left:-300px;
+        left:-300px;
     }
-    header .footer{
-        left: -300px; 
+    header.footer{
+        left: -300px;
     }
     #MenuBtn{
         display: block;
+    }
+}
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+/*main secction*/
+main{
+    margin-left: 300px;
+    background-color:var(--bgColor);
+    transition: 0.3s;
+}
+@media screen and(max-width:1050px){
+    main{
+        margin-left: 0;
+    }
+}
+/*home section*/
+#home{
+    height: 100vh;
+    width: 100%;
+    background-image: url(/img/fondo\ developer.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    padding: 70px;
+    position: relative;
+
+}
+/*overlay*/
+#home::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.431);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#home .home-row{
+    z-index: 1;
+}
+#home .home-row h1{
+    font-size: 60px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+    line-height: 70px;
+}
+#home .home-row h1 span{
+    color: var(--sideBGColor);
+
+}
+#home .home-row p{
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: 500;
+
+}
+#home .home-row p span{
+    border-bottom: 4px solid var(--sideBGColor);
+}
+/*mobil view*/
+@media screen and (max-width:670px){
+    #home{
+        padding: -30px;
+    }
+    #home .home-row h1{
+        font-size: 35px;
+        color: white;
+        font-weight:0;
+        letter-spacing: -1px;
+        line-height: 50px;
+    }
+    #home .home-row br{
+        display: none;
+    }
+    #home .home-row p{
+        font-size: 40px;
+        font-weight: 400;
+    
     }
 }
