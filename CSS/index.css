@@ -5,12 +5,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Poppins', sans-serif;;
+    font-family:'Poppins', sans-serif;
 }
 /*varibles g*/
 :root{
     --sideBGColor:#5375a3;
-    --themeBColor:#00a78e;
+    --themeBColor:#09af97;
     --iconsBColor:#2c2f3f;
     --textColor:#525252;
     --bgColor:#f7f7f7;
@@ -103,5 +103,35 @@ header .footer{
 }
 header .footer p a{
     color: var(--themeBColor);
+    
 }
 /*header end*/
+/*Moviles Nav Toggle*/
+#MenuBtn{
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color:#5375a3;
+    text-align: center;
+    line-height: 42px;
+    border-radius: 50px;
+    display: none;
+    box-shadow: 0 0 20px rgba(0,0,0 , 20%);
+    z-index: 999;
+}
+/*mobiles view*/
+@media only screen and (max-width:1050px){
+    header{
+    left:-300px;
+    }
+    header .footer{
+        left: -300px; 
+    }
+    #MenuBtn{
+        display: block;
+    }
+}
