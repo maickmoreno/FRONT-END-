@@ -1,3 +1,107 @@
-h1{
-    color:   red;
+/*google fonts*/
+@import url('https://fonts.googleapis.com/css2? family=Poppins:ital,wght@0,300;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+/*css reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;;
 }
+/*varibles g*/
+:root{
+    --sideBGColor:#5375a3;
+    --themeBColor:#00a78e;
+    --iconsBColor:#2c2f3f;
+    --textColor:#525252;
+    --bgColor:#f7f7f7;
+}
+/*header star*/
+header{
+    cursor: pointer;
+    height: 100vh;
+    width: 300px;
+    padding: 15px 30px;
+    background-color: var(--sideBGColor);
+    overflow-y: auto;
+    position: fixed;
+    left: 0;
+    top:0;
+    bottom: 0;
+    transition: 0.4s;
+    z-index: 99;
+}
+header .perfil{
+    text-align: center;
+    margin:10px 0 ;
+}
+header .perfil img{
+    width: 150px;
+    border-radius: 50%;
+    border: 10px solid var(--iconsBColor);
+}
+header .perfil h1{
+    color: white;
+    font-weight: 600;
+}
+header .perfil .social-icons a{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    text-align:center;
+    line-height: 37px;
+    background-color:var(--iconsBColor);
+    color: azure;
+    font-size: 18px;
+    margin: 1.5px;
+    transition: 1.4s;
+}
+header .perfil .social-icons a:hover{
+    background-color: var(--themeBColor);
+}
+/*nav*/
+header nav{
+    margin-top: 35px;
+}
+header nav ul li{
+    list-style: none;
+    padding: 7px;
+}
+header nav ul li a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    font-weight:400px;
+    font-size: 20px;
+    letter-spacing: 0.6px;
+}
+herader nav ul li i{
+    margin-right: 15px;
+    font-size: 25px;
+    transition: 0.4s;
+}
+herader nav ul li a:hover i{
+    color: var(--themeBColor);
+}
+herader nav ul li.active i{
+    color: var(--themeBColor);
+}
+/*footer*/
+header .footer{
+    text-align: center;
+    background-color: var(--sideBGColor);
+    width: 300px;
+    color:floralwhite;
+    font-size: 14px;
+    letter-spacing: 0.6px;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    transition: 0.4s;
+}
+header .footer p a{
+    color: var(--themeBColor);
+}
+/*header end*/
